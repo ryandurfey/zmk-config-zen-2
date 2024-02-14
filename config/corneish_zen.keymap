@@ -45,10 +45,11 @@ behaviors {
                 default_layer {
                         label = "LETR";
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
+// |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U   |  I  |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G  |      |  H  |  J   |  K  |  L  |  ;  |
 // |  LS Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  RS /  |
 //     | GUI RET | L2 BSPC | L1 SPC |   | ALT TAB | CTRL SPC  | GUI ESC |
+
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P
    &kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L   &kp SEMI
@@ -56,17 +57,19 @@ behaviors {
       &hm LCTRL ENTER &lt ARWS BKSP &lt NUMS SPACE   &hm LALT TAB  &kp SPC  &hm LGUI ESC
                         >;
                 };
+
                 numbers_layer {
                         label = "NUMS";
 // -----------------------------------------------------------------------------------------
 // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
 // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
 // |  `  |  ~  |  _  |  [  |  ]  |   |  +  |  -  |  =  |  '' |  '  |
-//                |    |     |   |   |    |     |    |
+//                |    |     | X |   |    |     |    |
+
                         bindings = <
   &kp EXCL   &kp AT      &kp HASH  &kp DLLR   &kp PRCNT     &kp CARET &kp AMPS   &kp KP_MULTIPLY &kp LPAR  &kp RPAR
   &kp N1     &kp N2      &kp N3    &kp N4     &kp N5        &kp N6    &kp N7     &kp N8          &kp N9    &kp N0
-  &kp GRAVE  &kp TILDE   &kp UNDER  &kp LBKT   &kp RBKT      &kp PLUS  &kp MINUS  &kp EQUAL       &kp DQT  &kp SQT
+  &kp GRAVE  &kp TILDE   &kp UNDER &kp LBKT   &kp RBKT      &kp PLUS  &kp MINUS  &kp EQUAL       &kp DQT  &kp SQT
                           	    &trans  &trans  &trans      &trans  &trans  &trans
                         >;
                 };
@@ -75,9 +78,10 @@ behaviors {
                         label = "ARWS";
 // -----------------------------------------------------------------------------------------
 // |     | save | prnt | find |     |     |   |      |      |       |     |
-// | slct| copy | cut  | past | ss  |     |   | LEFT | DWN  |  UP   | RGT |
+// | slct| copy | cut  | past | scrs|     |   | LEFT | DWN  |  UP   | RGT |
 // |     |      |      | undo | redo|     |   | HOME | PGDN | PGUP  | END |
-//              |      |      |     |     |   |      |    |
+//              |      |   X  |     |     |   |      |    |
+
                         bindings = <
    &trans    &kp LG(S) &kp LG(P) &kp LG(F) &trans         &trans &trans   &trans    &trans    &trans
    &kp LG(A) &kp LG(X) &kp LG(C) &kp LG(V) &kp LA(G)      &trans &kp LEFT &kp DOWN  &kp UP    &kp RIGHT
